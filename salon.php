@@ -83,7 +83,7 @@ foreach ($groupesCDM as $nomGroupe => $equipes) {
     });
 }
 // ==========================================
-// LE BOSS FINAL : LES QUALIFIÉS (AVEC TA MATRICE !)
+// LE BOSS FINAL : LES QUALIFIÉS (AVEC LA MATRICE !)
 // ==========================================
 $premiers = [];
 $deuxiemes = [];
@@ -123,14 +123,14 @@ foreach($huitMeilleursTroisiemes as $t) {
 sort($lettresQualifies);
 $combinaisonCle = implode('_', $lettresQualifies); // Ex: "E_F_G_H_I_J_K_L"
 
-// 4. TA MATRICE (Traduit en PHP)
+// 4. LA MATRICE (Traduit en PHP)
 // La clé est la combinaison triée. La valeur est un tableau associatif qui dit quel 3ème va contre quel 1er.
 $matriceTroisiemes = [
     'E_F_G_H_I_J_K_L' => ['1A'=>'E', '1B'=>'J', '1D'=>'I', '1E'=>'F', '1G'=>'H', '1I'=>'G', '1K'=>'L', '1L'=>'K'],
     'D_F_G_H_I_J_K_L' => ['1A'=>'H', '1B'=>'G', '1D'=>'I', '1E'=>'D', '1G'=>'J', '1I'=>'F', '1K'=>'L', '1L'=>'K'],
     'D_E_G_H_I_J_K_L' => ['1A'=>'E', '1B'=>'J', '1D'=>'I', '1E'=>'D', '1G'=>'H', '1I'=>'G', '1K'=>'L', '1L'=>'K'],
     'D_E_F_H_I_J_K_L' => ['1A'=>'E', '1B'=>'J', '1D'=>'I', '1E'=>'D', '1G'=>'H', '1I'=>'F', '1K'=>'L', '1L'=>'K'],
-    // ... Tu peux rajouter les autres lignes de ton Bloc-notes ici au même format ...
+    // ... On ajoutera les autres lignes du Bloc-notes ici au même format ...
 ];
 
 // Si on n'a pas encore fini de remplir les scores, la combinaison n'existera pas dans la matrice.
@@ -146,7 +146,7 @@ function getTroisieme($idPremier, $adversairesTroisiemes, $mapTroisiemes) {
     return "3ème (En attente)";
 }
 
-// 5. Ton fameux tableau des 16èmes de finale !
+// 5. Tableau des 16èmes de finale !
 $seizieme_matchs = [
     ['eqA' => $premiers['E'], 'eqB' => getTroisieme('1E', $adversairesTroisiemes, $mapTroisiemes), 'id' => '16_1'],
     ['eqA' => $premiers['I'], 'eqB' => getTroisieme('1I', $adversairesTroisiemes, $mapTroisiemes), 'id' => '16_2'],
