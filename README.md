@@ -43,7 +43,9 @@ Modifiez les identifiants de connexion dans le fichier connexion.php si nécessa
 
 Lancez votre serveur (Apache/MySQL) et accédez à http://localhost/prono-cdm-2026/index.php.
 
-🔜 Évolutions prévues (Roadmap du WIP) [ ] En cours : Intégration de la matrice complète des 16èmes de finale pour le placement exact des meilleurs troisièmes.
+🔜 Évolutions prévues (Roadmap du WIP) 
+
+[ ] En cours : Intégration de la matrice complète des 16èmes de finale pour le placement exact des meilleurs troisièmes.
 
 [ ] Ajouter l'arbre complet des phases à élimination directe (Huitièmes jusqu'à la Finale).
 
